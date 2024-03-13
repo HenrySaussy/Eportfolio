@@ -1,4 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 * {
-    color: red;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6, span {
+    line-height: 1.25;
+    color: black;
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5; 
+}
+li{
+    list-style-type: none;
+}
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.text--purple{
+    color: purple;
+}
+/* NAV BAR */
+nav{
+    height: 100px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__link--list {
+    display: flex;
+}
+.nav__link--anchor {
+    margin: 0 12px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+.nav__link--anchor-primary {
+    background-color: purple;
+    border: solid black;
+    border-width: 4px;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 300ms ease;
+}
+.nav__link--anchor-primary:hover {
+    background-color: lightpink;
+    border-color: grey;
+}
+.personal__logo{
+    font-size: 24px;
+    color: purple;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+/* ABOUT ME */
+
+#about-me{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__info--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-me__info{
+    display: flex;
+    flex-direction: column;
+}
+.about-me__picture--mask{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgb(0, 0, 0, .25);
+    margin-bottom: 25px;
+}
+.about-me__picture{
+    width: 100%;
+    padding-top: 8px;
+    transform: scale(1.5);
+}
+.about-me__link{
+    color: purple solid;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 0 16px;
+}
+.about-me__image--container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.about-me__image{
+    width: 100%;
 }
