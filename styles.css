@@ -105,13 +105,18 @@ nav{
     padding-top: 8px;
     transform: scale(1.5);
 }
+.about-me__links{
+    margin: 16px;
+}
 .about-me__link{
-    color: purple solid;
     font-size: 24px;
     text-decoration: none;
-    padding: 0 16px;
+    margin: 16px 16px;
+    color: purple;
+    /* WHY IS COLOR NOT CHANGING???????*/
 }
 .about-me__image--container{
+    margin-top: 16px;
     flex: 1;
     display: flex;
     align-items: center;
