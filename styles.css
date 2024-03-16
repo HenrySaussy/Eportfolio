@@ -6,6 +6,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 h1,h2,h3,h4,h5,h6, span {
     line-height: 1.25;
     color: black;
@@ -37,6 +40,26 @@ li{
 }
 .section__title{
     margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    position: relative;
+}
+.link__hover-effect:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    bottom: -3px;
+    right: 0;
+    transition: 300ms ease;
+}
+.link__hover-effect--white:after {
+    background-color: white;
+}
+.link__hover-effect:hover:after{
+    width: 100%;
+    left: 0;
 }
 /* NAV BAR */
 nav{
@@ -118,7 +141,7 @@ nav{
     font-size: 24px;
     text-decoration: none;
     margin: 16px 16px;
-    color: purple;
+    color: solid purple;
     /* WHY IS COLOR NOT CHANGING???????*/
 }
 .about-me__image--container{
@@ -264,7 +287,39 @@ footer{
     justify-content: center;
     padding: 8% 0;
 }
+
+.footer__social--list{
+    margin-bottom: 28px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+
+}
 .footer__logo-img{
     width: 70px;
     height: 70px;
 }
+.footer__social--link,
+.footer__copyright,
+.footer__logo--popper {
+    color: white;
+}
+.footer__logo--popper{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    transition: all 300ms ease;
+    opacity: 0;
+    color: white;
+}
+.footer__anchor{
+    position: relative;
+    margin-bottom: 28px;
+}
+.footer__anchor:hover .footer__logo--popper{
+transform: translateX(60px);
+opacity: 1;
+}
+/*LINKS STILL BLACK TEXT. UP ARROW BLACK TEXT*/
