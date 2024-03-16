@@ -181,9 +181,11 @@ nav{
     transition: all 500ms ease;
 }
 .project__wrapper {
+    display: flex;
     box-shadow: 0 20px 80px rgb(0,0,0,0.45);
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
 .project__wrapper:before{
     content: "";
@@ -207,15 +209,45 @@ nav{
 .project__list{
     padding-top: 40px;
 }
+.project:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
 .project__description{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(100%);
     left: 90px;
     max-width: 550px;
     z-index: 3;
+    transition: transform 450ms, opacity 300ms;
+    opacity: 0;
+    color: #fff;
 }
-.project__description--title, .project__description--sub-title, .project__description--para, .project__description--link{
+.project__description--para{
+    margin: 16px 0px;
+}
+.project__description--link{
+    font-size: 20px;
+    margin-right: 16px;
+    text-decoration: none;
+}
+.project:hover .project__description{
+    opacity: 1;
+}
+.project__description--link{
+    color: #fff solid;
+}
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link{
 text-align: left;
-color: black;
+color: #fff;}
+.project {
+    margin-bottom: 135px;
 }
+.project:last-child{
+    margin-bottom: 40px;
+}
+/*WHY ARE .project__description--link NOT WHITE????*/
